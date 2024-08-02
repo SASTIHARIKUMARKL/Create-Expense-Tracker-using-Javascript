@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Tracker</h1>
+       <div class="track">
+        <input type="text" id="descrip" placeholder="Description">
+        <input type="text" id="amount" placeholder="Amount">
+        <select id="option">
+            <option value="food">Food</option>
+            <option value="medicine">Medicine</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="travel">Travel</option>
+            <option value="other">Other</option>
+        </select>
+        <input type="date" id="date">
+        <button onclick="add()">Add Expense</button>
+       </div>
+      <div class="tab">
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>Expense Name</th>
+                    <th>Amount</th>
+                    <th>Category</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+           
+            <tbody></tbody>
+           </table>
+      </div>
+       <div class="total">
+        <h3>Total : Rs. <span id="total">0.00</span></h3>
+       </div>
+       <div class="filter">
+        <label for="filter">Filter by Category :  </label>
+        <select id="filteroption" onchange="filtexp()">
+            <option value="all">All</option>
+            <option value="food">Food</option>
+            <option value="medicine">Medicine</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="travel">Travel</option>
+            <option value="other">Other</option>
+        </select>
+       </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
